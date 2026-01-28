@@ -20,7 +20,7 @@ $code = isset($_POST['code']) ? $_POST['code'] : '';
 // Cevabı JSON olarak döndür
 echo json_encode([
     "success" => true, // veya false
-    "message" => "İşlem başarılı",
+    "message" => "İşlem başarılı baba",
     "followerCount" => 100,
     "packageName" => "Start Pack",
     "description" => "Açıklama"
