@@ -29,7 +29,6 @@ if ($code && array_key_exists($code, $codeDatabase)) {
     $found_price = $codeDatabase[$code]['ADET'];
     echo json_encode([
     "success" => true, // veya false
-    "message" => "İşlem başarılı baba",
     "followerCount" => $found_price,
     "packageName" => $found_item,
     "description" => "Açıklama"
