@@ -19,8 +19,8 @@ $code = isset($_POST['code']) ? $_POST['code'] : '';
 
 // ... Kod kontrol işlemleriniz ...
 $codeDatabase = [
-    "DENEME" => ["ACIKLAMA" => "Instagram Takipçi", "ADET" => 50],
-    "VIP" => ["ACIKLAMA" => "Instagram Takipçi", "ADET" => 1500]
+    "DENEME" => ["ACIKLAMA" => "DLuxeTools", "ADET" => 50],
+    "VIP" => ["ACIKLAMA" => "DLuxeTools", "ADET" => 1500]
 ];
 
 if ($code && array_key_exists($code, $codeDatabase)) {
@@ -29,7 +29,7 @@ if ($code && array_key_exists($code, $codeDatabase)) {
     $found_price = $codeDatabase[$code]['ADET'];
     echo json_encode([
     "success" => true, // veya false
-    "packageName" => "",
+    "packageName" => $found_item,
     "followerCount" => $found_price,
     "description" => "Açıklama"
     ]);
