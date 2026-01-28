@@ -39,7 +39,7 @@ if ($code && array_key_exists($code, $codeDatabase)) {
     http_response_code(404);
     echo json_encode([
     "success" => false,
-    "message": msg.invalid
+    "message": "msg.invalid"
     ]);
 }
 
