@@ -9,9 +9,11 @@ header("Content-Type: application/json; charset=UTF-8");
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     http_response_code(200);
     exit();
-}
+}else{
 
-// Verileri al (React uygulamasındaki URLSearchParams güncellemesi sayesinde $_POST çalışır)
+    if($_POST){
+
+        // Verileri al (React uygulamasındaki URLSearchParams güncellemesi sayesinde $_POST çalışır)
 $username = isset($_POST['username']) ? $_POST['username'] : '';
 $code = isset($_POST['code']) ? $_POST['code'] : '';
 
@@ -39,6 +41,13 @@ if ($code && array_key_exists($code, $codeDatabase)) {
     "success" => false
     ]);
 }
+
+        
+        
+    }
+    
+}
+
 
 
 
