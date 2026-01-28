@@ -1,1 +1,3 @@
-<b>SELAM</b>
+<?php
+
+print_r($_POST);
