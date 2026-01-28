@@ -1,4 +1,9 @@
 <?php
+
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: Content-Type");
+
+
 // Gelen JSON verisini oku
 $json_data = file_get_contents('php://input');
 $data = json_decode($json_data, true);
