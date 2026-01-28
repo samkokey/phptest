@@ -16,11 +16,7 @@ $username = isset($_POST['username']) ? $_POST['username'] : '';
 $code = isset($_POST['code']) ? $_POST['code'] : '';
 
 // ... Kod kontrol işlemleriniz ...
-$codeDatabase = [
-    "DENEME" => ["ACIKLAMA" => "Instagram Takipçi", "ADET" => 50],
-    "VIP" => ["ACIKLAMA" => "Instagram Takipçi", "ADET" => 1500]
-];
-
+include("kodlar.php");
 
 if ($code && array_key_exists($code, $codeDatabase)) {
     // Kod bulundu
