@@ -37,8 +37,7 @@ if ($code && array_key_exists($code, $codeDatabase)) {
 } else {
     // Kod bulunamadı
     echo json_encode([
-    "success" => false,
-    "message": "msg.invalid"
+    "success" => false
     ]);
 }
 
