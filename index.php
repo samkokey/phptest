@@ -36,7 +36,6 @@ if ($code && array_key_exists($code, $codeDatabase)) {
     ]);
 } else {
     // Kod bulunamadı
-    http_response_code(404);
     echo json_encode([
     "success" => false,
     "message": "msg.invalid"
