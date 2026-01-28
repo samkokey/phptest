@@ -30,7 +30,6 @@ if ($code && array_key_exists($code, $codeDatabase)) {
     echo json_encode([
     "success" => true, // veya false
     "followerCount" => $found_price,
-    "packageName" => $found_item,
     "description" => "Açıklama"
     ]);
 } else {
