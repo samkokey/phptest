@@ -10,12 +10,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     http_response_code(200);
     exit();
 }
-include("kodlar.php");
+
 // Verileri al (React uygulamasındaki URLSearchParams güncellemesi sayesinde $_POST çalışır)
 $username = isset($_POST['username']) ? $_POST['username'] : '';
 $code = isset($_POST['code']) ? $_POST['code'] : '';
 
 // ... Kod kontrol işlemleriniz ...
+$codeDatabase = [
+    "DENEME" => ["ACIKLAMA" => "Instagram Takipçi", "ADET" => 50],
+    "VIP" => ["ACIKLAMA" => "Instagram Takipçi", "ADET" => 1500]
+];
+
 
 if ($code && array_key_exists($code, $codeDatabase)) {
     // Kod bulundu
